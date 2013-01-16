@@ -1,0 +1,23 @@
+|--rs 文件夹为json 资源的请求地址，根据服务器路径来设置
+
+swagger-ui.js 为核心的处理文件，可自定义方法参数
+
+swagger-ui.js 此文件可定制api列表的ui界面
+
+index.html js代码说明：
+
+
+              window.swaggerUi = new SwaggerUi({
+                    discoveryUrl:"PATH_TO_RESOURCE_DIR/resources.json", //resource.json文件的寻找路径，根据服务器设置定制
+                    apiKeyName:"api-key",   //请求地址后的token参数请求名字,如 http://exmaple/api?api-key=value 中的api-key
+                    apiKey:"special-key",  //上面api-key中对应的值
+                    basePath:"http://petstore.swagger.wordnik.com/api/",  //api列表文件(如rs文件夹中的example.json)对应的文件资源base path，一般和resource.json同一目录下
+                    apiPath:"http://petstore.swagger.wordnik.com/api/", //点击测试时请求api的基本地址
+                    dom_id:"swagger-ui-container",
+                    supportHeaderParams: false,
+                    supportedSubmitMethods: ['get', 'post', 'put']
+                });
+
+.............................................................
+
+2012/10/19 by ekin.cen

@@ -1,0 +1,69 @@
+|--resource.json 模块对应的资源文件列表
+   
+   如 "apis":[
+    {
+        "path":"/example.{format}",
+        "description":"模块名称"
+    }
+    ]
+   将查找exmaple.json对应的api列表
+
+|--example.json  模块下每个api接口对应的设置参数例子
+
+   具体说明：
+{
+    "apiVersion":"0.2",
+    "swaggerVersion":"1.1",
+    "resourcePath":"/module", //资源路径，对应模块
+    "apis":
+    [
+	//下面是一个POST方法例子
+    {
+        "path":"/module/action", //接口地址
+        "operations":
+        [
+        {
+            "httpMethod":"POST", //请求方法，post例子
+            "summary":"接口的文字说明",  //接口地址的中文说明
+            "description":"接口的api介绍", //api说明
+            "updateTime":"2012/10/12 12:11",//修改时间
+            "reviser":"ekin", //修订人（修改者）
+            "revisionHighlight":true,//修订日期和作者信息中是否启用高亮（红色）显示字体
+            "revisionDesc":"修订说明",//修订说明
+            "responseClass":"void",
+            "nickname":"ui中对应的别名",//一般为接口名称（action）
+            "parameters":
+            [
+            {
+                "paramType":"body", //此为固定参数
+                "description":"参数说明", //参数说明文字
+                "required":true,//是否为必要参数
+                "dataType":"name" //post请求的参数名称
+            }
+            ]
+        }
+        ]
+    },
+	//下面是一个GET方法的请求参数例子
+	 {
+        "path":"/module/action", //接口地址
+        "operations":
+        [
+        {
+            "httpMethod":"GET", //请求方法，post例子
+            "parameters":
+            [
+            {
+                "paramType":"path", //此为固定参数
+                "description":"参数说明", //参数说明文字
+                "required":"name" //是否为必要参数
+				"name":"name" //get请求的参数名称
+            }
+            ]
+        }
+        ]
+    }
+    ]
+}
+   
+
