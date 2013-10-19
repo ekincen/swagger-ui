@@ -43,6 +43,7 @@ http://petstore.swagger.wordnik.com/
 
 3. 增加了返回结果的json示例
 
+4. 增加了结果字段的说明表格
+
 By yijiancen
 
-4. 增加了结果字段的说明表格
